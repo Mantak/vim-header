@@ -1,3 +1,18 @@
+" File              : autoload/header.vim
+" Author            : Mantak <mantak.cn@gmail.com>
+" Date              : 2017-09-01
+" Last Modified Date: 2017-09-01
+" Last Modified By  : Mantak <mantak.cn@gmail.com>
+" File              : autoload/header.vim
+" Author            : Mantak <mantak.cn@gmail.com>
+" Date              : 2017-09-01
+" Last Modified Date: 2017-09-01
+" Last Modified By  : Mantak <mantak.cn@gmail.com>
+" File              : autoload/header.vim
+" Author            : Mantak <mantak.cn@gmail.com>
+" Date              : 2017-09-01
+" Last Modified Date: 2017-09-01
+" Last Modified By  : Mantak <mantak.cn@gmail.com>
 " PROPERTIES AND FUNCTIONS FOR GENERAL PURPOSES
 " ---------------------------------------------
 " Set default global values
@@ -70,6 +85,7 @@ fun s:set_props()
         \ b:filetype == 'php' ||
         \ b:filetype == 'go' ||
         \ b:filetype == 'sass' ||
+        \ b:filetype == 'wxss' ||
         \ b:filetype == 'rust'
 
         let b:block_comment = 1
@@ -139,6 +155,10 @@ fun s:set_props()
         let b:first_line = '<!DOCTYPE html>'
         let b:first_line_pattern = '<!DOCTYPE\s* html>'
         let b:block_comment = 1
+        let b:comment_char = ' -'
+        let b:comment_begin = '<!--'
+        let b:comment_end = '-->'
+    elseif b:filetype == 'wxml'
         let b:comment_char = ' -'
         let b:comment_begin = '<!--'
         let b:comment_end = '-->'
